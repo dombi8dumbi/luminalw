@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINAL - Shop</title>
+    <style>
+        body {
+            background: url('Capture d’écran_30-3-2025_145352_www.instagram.com.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .merch-item {
+            display: inline-block;
+            text-align: center;
+            margin: 20px;
+        }
+        .merch-item img {
+            width: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .merch-item p {
+            color: aliceblue;
+        }
+        .order-section {
+            display: none;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .order-section h2 {
+            color: orangered;
+        }
+        .order-section label {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <h1 style="color: orangered; text-shadow: 0 0 10px black;">Shop LUMINAL Merch</h1>
+
+    <!-- Merchandise Section -->
+    <div>
+        <h2 style="color: orange; text-decoration: underline;">Our Merchandise</h2>
+        <p style="color: black;">Click on an item to order:</p>
+        <div class="merch-item" onclick="showOrderForm('T-Shirts', 20)">
+            <img src="https://th.bing.com/th/id/OIP.Ub6YpRIAymTwuyjRcSD92QHaIL?w=237&h=262&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="T-Shirt">
+            <p style="color: black;" >T-Shirts - $20</p>
+        </div>
+        <div class="merch-item" onclick="showOrderForm('Posters', 10)">
+            <img src="c:\Users\NIMBUZ STORE\Downloads\Capture d’écran_30-3-2025_14269_www.instagram.com.jpeg" alt="Poster">
+            <p style="color: black;">Posters - $10</p>
+        </div>
+        <div class="merch-item" onclick="showOrderForm('Albums', 15)">
+            <img src="https://th.bing.com/th/id/OIP.3oHDoofKzoBgbKneCzJqWQHaFT?w=274&h=196&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Album">
+            <p style="color: black;">Albums - $15</p>
+        </div>
+        <div class="merch-item" onclick="showOrderForm('Lightstick', 18)">
+            <img src="c:\Users\NIMBUZ STORE\Downloads\realistic lightstick with an upside-down A inside a ball.png" alt="Lightstick">
+            <p style="color: black;">Lightstick - $18</p>
+        </div>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="order-section" id="orderSection">
+        <h2 style="color: orange;">Order Details</h2>
+        <form id="orderForm">
+            <label style="color: black;" for="clientName">Name:</label><br>
+            <input type="text" id="clientName" name="clientName" required><br><br>
+
+            <label style="color: black;" for="clientAddress">Delivery Address:</label><br>
+            <input type="text" id="clientAddress" name="clientAddress" required><br><br>
+
+            <label style="color: black;" for="clientCountry">Country (for international orders):</label><br>
+            <input type="text" id="clientCountry" name="clientCountry"><br><br>
+
+            <label style="color: black;" for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" value="1" required><br><br>
+
+            <p id="priceDisplay" style="color: orangered;"></p>
+
+            <button type="submit" style="background-color: orange; color: black; border: 2px solid black; padding: 10px;">Place Order</button>
+        </form>
+        <p id="confirmationMessage" style="color: green; display: none;"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 20px; color: orange;">
+        <p>&copy; 2025 LUMINAL. All Rights Reserved.</p>
+        <a href="luminal.html" style="color: orangered; text-decoration: none;">Back to Home</a>
+    </footer>
+
+    <script>
+        function showOrderForm(itemName, itemPrice) {
+            const orderSection = document.getElementById('orderSection');
+            const priceDisplay = document.getElementById('priceDisplay');
+            const form = document.getElementById('orderForm');
+            
+            orderSection.style.display = 'block';
+            priceDisplay.textContent = `Item: ${itemName}, Unit Price: $${itemPrice}`;
+            
+            form.onsubmit = (event) => {
+                event.preventDefault();
+                const quantity = document.getElementById('quantity').value;
+                const totalPrice = (itemPrice * quantity) + 10; // $10 shipping + tax could be added
+                const deliveryDate = new Date();
+                deliveryDate.setDate(deliveryDate.getDate() + 7); // Estimated delivery in 7 days
+
+                document.getElementById('confirmationMessage').style.display = 'block';
+                document.getElementById('confirmationMessage').textContent = `Your ${itemName} has been ordered and will be delivered on ${deliveryDate.toDateString()}! Total: $${totalPrice}`;
+            };
+        }
+    </script>
+</body>
+</html>

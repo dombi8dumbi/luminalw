@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINAL - Contact</title>
+</head>
+
+<body background="c:\Users\NIMBUZ STORE\Pictures\Sans titre.png"
+    style="color: black; text-align: center; font-family: Arial, sans-serif;">
+    <!-- Header Section -->
+    <div style="padding: 20px; border: 5px solid orange;">
+        <h1 style="color: orangered; font-family:'Times New Roman', Times, serif; text-shadow: 0 0 10px black;">Contact
+            LUMINAL</h1>
+    </div>
+
+    <!-- Contact Information -->
+    <h2 style="color: orange; text-decoration: underline;">Get in Touch</h2>
+    <p style="color: aliceblue;">If you have any inquiries, feel free to reach out to us through the following methods:
+    </p>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin: 10px; color: aliceblue;">📧 Email: <a href="mail to:luminalsluminal@gmail.com"
+                style="color: orangered;">contact@luminal.com</a></li>
+        <li style="margin: 10px; color: aliceblue;">📞 Phone: +1 (234) 567-890</li>
+        <li style="margin: 10px; color: aliceblue;">🌐 Website: <a href="luminal.html" style="color: orangered;"
+                target="_blank">www.luminal.com</a></li>
+    </ul>
+
+    <!-- Social Media Links -->
+    <h2 style="color: orange; text-decoration: underline;">Follow Us</h2>
+    <p style="color: aliceblue;">Stay connected on our social media platforms:</p>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin: 10px;"><a href="http://www.instagram.com/luminals_officiel" style="color: orangered;"
+                target="_blank">Instagram</a></li>
+        <li style="margin: 10px;"><a href="http://www.x.com/luminalofc" style="color: orangered;"
+                target="_blank">Twitter</a></li>
+        <li style="margin: 10px;"><a href="http://www.facebook.com/luminalshine" style="color: orangered;"
+                target="_blank">Facebook</a></li>
+        <li style="margin: 10px;"><a href="https://www.tiktok.com/@luminal_official?is_from_webapp=1&sender_device=pc" style="color: orangered;" target="_blank">tiktok</a></li>
+        <li style="margin: 10px;"><a href="https://l.instagram.com/?u=https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029Va9ZqOc4inoy1ywYve2P%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAabrQ3JT2sbLWXsRbm-jXaCVC-FwoRxbwzN7RQs2NyLj8PcFgg13Ii6k6pU_aem_uctX7yhEBKR_S3l9el1kPw&e=AT1YG4yU6XXoDJCDLjLK1pvQs1T8-hCm62sVBYRaXUirSJx4vaZe7IXKXUPMlYPY6ikwuYLYYqMUsZ-NmSR6aL1igVVALnFU23XJiwU" style="color: orangered;"
+            target="_blank">Whatsapp</a></li>
+    </ul>
+
+    <!-- Contact Form -->
+    <h2 style="color: orange; text-decoration: underline;">Send Us a Message</h2>
+<form id="contactForm">
+    <label for="name" style="color: aliceblue;">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email" style="color: aliceblue;">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message" style="color: aliceblue;">Message:</label><br>
+    <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+
+    <button type="submit"
+        style="background-color: orange; color: black; border: 2px solid black; padding: 10px;">Send</button>
+</form>
+<p id="contactMessage" style="color: green; display: none;">Thanks for reaching out! We’ll get back to you shortly.</p>
+
+
+    <!-- Footer -->
+    <footer style="margin-top: 20px; color: orange;">
+        <p>&copy; 2025 LUMINAL. All Rights Reserved.</p>
+        <a href="luminal.html" style="color: orangered; text-decoration: none;">Back to Home</a>
+    </footer>
+    <script>
+        // Handle Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const contactMessage = document.getElementById('contactMessage');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            contactMessage.style.display = 'block'; // Show confirmation message
+            contactForm.reset(); // Clear the form
+        });
+    </script>
+    
+</body>
+
+</html>
