@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINAL Website</title>
+</head>
+<body background="c:\Users\NIMBUZ STORE\Downloads\Capture d’écran_30-3-2025_142111_www.instagram.com.jpeg" style="color: black; text-align: center; font-family: Arial, sans-serif;">
+
+    <!-- Navigation Bar -->
+    <div style="position: fixed; top: 0; right: 0; background-color: orange; padding: 10px; border: 2px solid black; border-radius: 10px;">
+        <a href="history.html" style="color: black; margin-right: 10px; text-decoration: none; font-weight: bold;">History</a>
+        <a href="contact.html" style="color: black; margin-right: 10px; text-decoration: none; font-weight: bold;">Contact</a>
+        <a href="help.html" style="color: black; text-decoration: none; font-weight: bold;">Help</a>
+    </div>
+    
+    <!-- Header Section -->
+    <div style="padding: 20px; border: 5px solid orange;">
+        <h1 style="color: orangered; font-family:'Times New Roman', Times, serif; text-shadow: 0 0 10px black;">LUMINAL Official Website</h1>
+        <p style="color: orangered; font-family:'Times New Roman', Times, serif; text-shadow: 0 0 10px black;">Let's Shine It Up</p>
+        <p style="color: aliceblue;">Get the latest news, shop for merch, and subscribe for updates!</p>
+    </div>
+
+    <!-- News Section -->
+    <h2 style="color: orange; text-decoration: underline;">
+        <a href="news.html" style="color: orange; text-decoration: none;">Latest News</a>
+    </h2>
+    <p style="color: aliceblue;">Stay tuned for updates on our upcoming performances, new album releases, and special events!</p>
+
+   <!-- Meet the Members Section -->
+<h2 style="color: orange; text-decoration: underline;">
+    <a href="members.html" style="color: orange; text-decoration: none;">Meet the Members</a>
+</h2>
+<p style="color: aliceblue;">Click to learn more about the amazing talents of LUMINAL!</p>
+
+    <!-- Merchandise Section -->
+    <h2 style="color: orange; text-decoration: underline;">Shop Our Merch</h2>
+</form>
+    <p style="color: aliceblue;">Exclusive t-shirts, posters, and accessories available now! Visit <a href="shop.html" style="color: white; text-decoration: underline;">our shop</a>.</p>
+
+    <!-- Fan Zone Section -->
+    <h2 style="color: orange; text-decoration: underline;">Fan Zone</h2>
+    <form id="fanZoneForm">
+        <label for="fan-comment" style="color: aliceblue;">Share Your Thoughts:</label><br>
+        <textarea id="fan-comment" name="fan-comment" rows="5" cols="30" required></textarea><br><br>
+        <button type="submit" style="background-color: orange; color: black; border: 2px solid black; padding: 10px;">Submit</button>
+    </form>
+    <p id="fanZoneMessage" style="color: green; display: none;">Thanks for sharing your thoughts!</p>
+    
+
+
+
+    <!-- Subscription Form -->
+    <h2 style="color: orange; text-decoration: underline;">Subscribe for Updates</h2>
+    <form id="subscribeForm">
+        <label for="name" style="color: aliceblue;">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label for="email" style="color: aliceblue;">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <button type="submit" style="background-color: orange; color: black; border: 2px solid black; padding: 10px;">Subscribe</button>
+    </form>
+    <p id="subscribeMessage" style="color: green; display: none;">Thanks for subscribing! You'll get news soon.</p>
+    
+
+    <!-- Lightstick Section -->
+<h2 style="color: orange; text-decoration: underline;">LUMINAL Lightstick</h2>
+<img src="c:\Users\NIMBUZ STORE\Downloads\realistic lightstick with an upside-down A inside a ball.png" alt="LUMINAL Lightstick" style="width: 300px; margin: 20px; border-radius: 10px;">
+<p style="color: aliceblue;">Get your exclusive LUMINAL lightstick today! Available in our <a href="shop.html" style="color: white; text-decoration: underline;">Shop</a>.</p>
+
+
+    <!-- Footer -->
+    <footer style="margin-top: 20px; color: orange;">
+        <p>&copy; 2025 LUMINAL. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Handle Fan Zone Form Submission
+        const fanZoneForm = document.getElementById('fanZoneForm');
+        const fanZoneMessage = document.getElementById('fanZoneMessage');
+        fanZoneForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            fanZoneMessage.style.display = 'block'; // Show confirmation message
+            fanZoneForm.reset(); // Clear the form
+        });
+    
+        // Handle Subscribe Form Submission
+        const subscribeForm = document.getElementById('subscribeForm');
+        const subscribeMessage = document.getElementById('subscribeMessage');
+        subscribeForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            subscribeMessage.style.display = 'block'; // Show confirmation message
+            subscribeForm.reset(); // Clear the form
+        });
+    </script>    
+</body>
+</html>
